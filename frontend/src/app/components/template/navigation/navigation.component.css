@@ -1,3 +1,14 @@
 .sidenav {
   width: 12.5rem;
 }
+
+.sidenav-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.content {
+  padding: 1rem;
+  background-color: #fff;
+}
