@@ -4,20 +4,31 @@ import { Router } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
 
 import { ProductService } from "../product.service";
-import { HttpClientModule } from "@angular/common/http";
+
+import { MatCardModule } from "@angular/material/card";
+import { FormsModule } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+
 import { Product } from "../product.model";
 
 @Component({
   selector: "app-product-create",
   standalone: true,
-  imports: [MatButtonModule, HttpClientModule],
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
   templateUrl: "./product-create.component.html",
   styleUrl: "./product-create.component.css",
 })
 export class ProductCreateComponent {
   product: Product = {
     name: "",
-    price: 0,
+    price: null,
   };
 
   constructor(private productService: ProductService, private router: Router) {}
