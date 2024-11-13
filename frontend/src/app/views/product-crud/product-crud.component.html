@@ -1,3 +1,13 @@
-<button mat-raised-button (click)="navigateToProductCreate()">
-  Novo Produto
-</button>
+<div class="products mat-elation-z1">
+  <div class="products-header">
+    <h2 class="title">Produtos</h2>
+
+    <button mat-raised-button (click)="navigateToProductCreate()">
+      Novo Produto
+    </button>
+  </div>
+
+  <div class="products-content">
+    <app-product-table></app-product-table>
+  </div>
+</div>
