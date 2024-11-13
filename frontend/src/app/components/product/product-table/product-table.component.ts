@@ -15,7 +15,7 @@ import { Product } from "../product.model";
   imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule],
 })
 export class ProductTableComponent implements AfterViewInit {
-  displayedColumns: string[] = ["id", "name", "price"];
+  displayedColumns: string[] = ["id", "name", "price", "action"];
   dataSource = new MatTableDataSource<Product>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
