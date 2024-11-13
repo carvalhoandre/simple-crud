@@ -4,22 +4,36 @@ import { Router } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
 
 import { ProductService } from "../product.service";
+import { HttpClientModule } from "@angular/common/http";
+import { Product } from "../product.model";
 
 @Component({
   selector: "app-product-create",
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, HttpClientModule],
   templateUrl: "./product-create.component.html",
   styleUrl: "./product-create.component.css",
 })
 export class ProductCreateComponent {
+  product: Product = {
+    name: "",
+    price: 0,
+  };
+
   constructor(private productService: ProductService, private router: Router) {}
 
-  navigateToProductCreate(): void {
-    this.productService.showMessage("Produto criado!");
+  navigateToProducts(): void {
+    this.router.navigate(["/products"]);
+  }
+
+  createProduct(): void {
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage("Produto criado com sucesso!");
+      this.navigateToProducts();
+    });
   }
 
   cancel(): void {
-    this.router.navigate(["/products"]);
+    this.navigateToProducts();
   }
 }
