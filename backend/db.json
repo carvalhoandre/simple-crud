@@ -19,6 +19,21 @@
       "id": "f212",
       "name": "Lampada",
       "price": 12.9
+    },
+    {
+      "id": "f7de",
+      "name": "IPhone 15",
+      "price": 5850
+    },
+    {
+      "id": "bd24",
+      "name": "IPhone 13",
+      "price": 3500
+    },
+    {
+      "id": "116c",
+      "name": "Xaomi S15",
+      "price": 2500
     }
   ]
 }

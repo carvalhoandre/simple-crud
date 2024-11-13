@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
   selector: "app-root",
   standalone: true,
   templateUrl: "./app.component.html",
+  styleUrl: "../styles.css",
   imports: [
     HeaderComponent,
     FooterComponent,
