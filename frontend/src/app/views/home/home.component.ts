@@ -1,3 +1,4 @@
+import { HeaderService } from "./../../components/template/header/header.service";
 import { Component } from "@angular/core";
 
 import { MatCardModule } from "@angular/material/card";
@@ -9,4 +10,12 @@ import { MatCardModule } from "@angular/material/card";
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.css",
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private headerService: HeaderService) {
+    headerService.headerData = {
+      title: "Início",
+      icon: "home",
+      route: "",
+    };
+  }
+}
